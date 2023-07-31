@@ -21,7 +21,7 @@ import java.util.*;
 @Service
 public class OpenAIService {
     private static final String API_URL = "https://api.openai.com/v1/chat/completions";
-    private static final String API_KEY = "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";
+    private static final String API_KEY = "";
 
     public String generateResponse(ArticleInfo post) 
     {
