@@ -3,6 +3,8 @@
 
 This project is a Java Spring Boot application that uses the US News API to fetch the latest technology news, allows users to save interesting articles to a "read-later" list, and employs OpenAI's GPT-3.5-Turbo to generate a full article body based on a headline. It demonstrates the use of several Spring Boot features including REST controllers, services, request mapping, and dependency injection.
 
+Designed with a template ArticleRepository to support easily swapping in a real database instead of the in-memory one. Spring Data JPA could be used to generate much of the boilerplate code for this.
+
 ## Endpoints
 
 The application provides the following REST API endpoints:
