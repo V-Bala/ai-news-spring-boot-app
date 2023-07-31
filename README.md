@@ -9,7 +9,7 @@ The application provides the following REST API endpoints:
 1. `GET /tech-news`: Fetches the latest technology news articles.
 2. `POST /read-later/{id}`: Adds an article with the given ID to the "read-later" list.
 3. `GET /read-later`: Retrieves the list of articles saved to the "read-later" list.
-4. `GET /openai-request`: Generates a response using OpenAI's GPT-4 based on the first article in the "read-later" list.
+4. `GET /openai-request`: Generates a full article using OpenAI's GPT-4 based on a given article headline in the "read-later" list.
 
 ## Project Structure
 
