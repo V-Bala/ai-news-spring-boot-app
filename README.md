@@ -31,5 +31,16 @@ git clone https://github.com/your-username/tech-news-chatbot.git
 cd tech-news-chatbot
 mvn spring-boot:run
 ```
-
 The application will start and listen for HTTP requests on port 8080.
+
+## Test Run
+```
+$ curl -X GET http://localhost:8080/tech-news
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  1978    0  1978    0     0   1348      0 --:--:--  0:00:01 --:--:--  1348[{"id":1,"title":"Hasbro's Newest Partnership May Bring AI to Dungeons & Dragons - Gizmodo"},{"id":2,"title":"Does the Samsung Galaxy Watch 6 Classic use standard bands? - Android Police"},{"id":3,"title":"Hasbro wants Xbox to bring back Activision's Transformers games via Game Pass | VGC - Video Games Chronicle"},{"id":4,"title":"Snag the best way to experience Half-Life for $5 while you still can - PCGamesN"},{"id":5,"title":"Asmongold comments on Path of Exile 2 being a Diablo 4 killer - Dexerto"},{"id":6,"title":"Call of Duty: Warzone Ban Wave Removes 14,000 Cheaters - GameRant"},{"id":7,"title":"PlayStation Classic flops on Steam despite strong reviews - Dexerto"},{"id":8,"title":"Jake Beardsley Wins Pro Tour The Lord of the Rings - Hipsters of the Coast"},{"id":9,"title":"iPhone 15 May Get Thinner Bezels, Higher Price - CNET"},{"id":10,"title":"‘Remnant 2’ Hid The Entire Archon Class Behind Datamining And Outfit-Selecting - Forbes"},{"id":11,"title":"Skyrim Artifact Tier List - GameRant"},{"id":12,"title":"Apple confirms bug stops Screen Time limits from sticking for kids - The Verge"},{"id":13,"title":"iPhone 15 Pro Said to Be 'Easier to Repair' Like iPhone 14 and 14 Plus - MacRumors"},{"id":14,"title":"Random: \"Ultimate Console Database\" Secures Ultra Rare Nintendo Labo Switch - Nintendo Life"},{"id":15,"title":"14 Exciting New Games Coming to Nintendo Switch - August 2023 - Nintendo Life"},{"id":16,"title":"Play the SNES Classic That Launched the Cozy Sim Trend on Switch Online ASAP - Inverse"},{"id":17,"title":"Samsung's Galaxy Z Flip 5 doesn't have DeX, but why? - XDA Developers"},{"id":18,"title":"\"We Have To Do This Now\" - Sonic Mania Devs On Creating Chaotic Yo-Yo Platformer Penny's Big Breakaway - Nintendo Life"},{"id":19,"title":"The PS Plus Free Games for August 2023 Solidify a Years-Long Pattern - GameRant"},{"id":20,"title":"Assassin's Creed Mirage Nowhere Near the Length of Origins, Odyssey, Valhalla - Push Square"}]
+
+$ curl -X GET http://localhost:8080/openai-request
+Title: "Gaming Titans Clash: Call of Duty's Publisher and Transformers Fuel Frustration in the Toy Industry!"
+In a jaw-dropping turn of events, the toy industry is buzzing with adrenaline as the battlefield between Call of Duty's publisher and the iconic Transformers franchise becomes the ultimate showdown of the century. Tensions have reached a fever pitch as these gaming titans engage in a head-to-head conflict, leaving fans and industry insiders alike on the edge of their seats. What sparked this epic rivalry, and how will it impact the future of our beloved action figures and gaming adventures? As the storm gathers, join us as we unveil the thrilling tale of frustration, ambition, and the clash of two unstoppable forces in the world of toys and entertainment!
+```
