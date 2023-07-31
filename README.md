@@ -18,7 +18,7 @@ The project is structured into several key classes:
 - `ApiController`: This is the main REST controller for the application. It handles HTTP requests and calls the appropriate service methods.
 - `NewsApiService`: This service fetches the latest technology news articles from the News API.
 - `ArticleService`: This service manages the "read-later" list and provides methods to add and retrieve articles.
-- `OpenAIService`: This service interacts with OpenAI's GPT-4 to generate responses based on a given article.
+- `OpenAIService`: This service interacts with OpenAI's GPT-4 to generate a full article based on a given article headline.
 
 ## How to Run
 
