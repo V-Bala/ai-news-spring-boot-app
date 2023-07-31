@@ -1,7 +1,7 @@
 # TechNews Chatbot API
 <img width="122" alt="robot" src="https://github.com/V-Bala/ai-news-spring-boot-app/assets/10373409/078c7979-4ab8-4b6b-96c6-7011ae4d1a84">
 
-This project is a Java Spring Boot application that uses the US News API to fetch the latest technology news, allows users to save interesting articles to a "read-later" list, and employs OpenAI's GPT-3.5-Turbo to generate a full article body based on a headline. It demonstrates the use of several Spring Boot features including REST controllers, services, and dependency injection.
+This project is a Java Spring Boot application that uses the US News API to fetch the latest technology news, allows users to save interesting articles to a "read-later" list, and employs OpenAI's GPT-3.5-Turbo to generate a full article body based on a headline. It demonstrates the use of several Spring Boot features including REST controllers, services, request mapping, and dependency injection.
 
 ## Endpoints
 
