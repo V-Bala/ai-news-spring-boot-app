@@ -13,7 +13,7 @@ The application provides the following REST API endpoints:
 2. `POST /read-later/{id}`: Adds an article with the given ID to the "read-later" list.
 3. `GET /read-later`: Retrieves the list of articles saved to the "read-later" list.
 4. `DELETE /read-later/{id}`: Removes an article with the given ID from the "read-later" list.
-5. `PUT /read-later/{id} -H "Content-Type: text/plain" -d <string>`: Attach a note to the article with the given ID to the "read-later" list.
+5. `PUT /read-later/{id} -H <content-type> -d <string>`: Attach a note to the article with the given ID to the "read-later" list.
 6. `GET /openai-request`: Generates a full article using OpenAI's GPT-4 based on a given article headline in the "read-later" list.
 
 ## Project Structure
