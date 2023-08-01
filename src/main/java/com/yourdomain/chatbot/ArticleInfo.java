@@ -1,9 +1,10 @@
 package com.yourdomain.chatbot;
 
-// DTO for article ID and title
+// DTO
 public class ArticleInfo {
     private Long id;
     private String title;
+    private String note;
 
     public ArticleInfo(Long id, String title) {
         this.id = id;
@@ -16,5 +17,13 @@ public class ArticleInfo {
 
     public String getTitle() {
         return title;
+    }
+
+    public String getNote() {
+        return note;
+    }
+
+    public void setNote(String note) {
+        this.note = note;
     }
 }

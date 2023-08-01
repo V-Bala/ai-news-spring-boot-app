@@ -24,11 +24,11 @@ public class ApiController {
     }
 
     @PostMapping("/read-later/{id}")
-    public ResponseEntity<Void> addArticleToReadLater(@PathVariable Long id) {
+    public ResponseEntity<ArticleInfo> addArticleToReadLater(@PathVariable Long id) {
         Optional<ArticleInfo> articleOptional = newsApiService.getArticleById(id);
         if (articleOptional.isPresent()) {
             articleService.addArticleReadLater(articleOptional.get());
-            return ResponseEntity.ok().build();
+            return ResponseEntity.ok(articleOptional.get());
         } else {
             return ResponseEntity.notFound().build();
         }
@@ -43,6 +43,17 @@ public class ApiController {
             return ResponseEntity.notFound().build();
         }
     }
+
+    @PutMapping("/read-later/{id}")
+    public ResponseEntity<ArticleInfo> updateArticleNote(@PathVariable Long id, @RequestBody String note) {
+        Optional<ArticleInfo> articleOptional = articleService.getArticleById(id);
+        if (articleOptional.isPresent()) {
+            articleService.updateNote(id, note);
+            return ResponseEntity.ok(articleOptional.get());
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+}
 
     @GetMapping("/read-later")
     public List<ArticleInfo> getReadLaterArticles() {
