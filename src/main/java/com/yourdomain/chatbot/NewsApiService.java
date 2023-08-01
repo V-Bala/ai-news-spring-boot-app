@@ -14,6 +14,7 @@ public class NewsApiService {
 
     @Autowired
     private ArticleService articleService;
+
     private static final String NEWS_API_URL = "https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=235403d0bfcc436aa65de11f9345903f";
 
     public List<ArticleInfo> getLatestTechNews() {
@@ -35,7 +36,8 @@ public class NewsApiService {
         // Create ArticleInfo objects and save them in ArticleService
         Long id = 1L;
         for (NewsArticle article : articles) {
-            ArticleInfo articleInfo = new ArticleInfo(id++, article.getTitle());
+            String cleanTitle = article.getTitle().replaceAll("[^a-zA-Z0-9\\s]", "");
+            ArticleInfo articleInfo = new ArticleInfo(id++, cleanTitle);
             articleService.addArticleInfo(articleInfo);
         }
 

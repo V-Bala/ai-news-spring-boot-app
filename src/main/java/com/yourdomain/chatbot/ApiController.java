@@ -34,6 +34,16 @@ public class ApiController {
         }
     }
 
+    @DeleteMapping("/read-later/{id}")
+    public ResponseEntity<Void> removeArticleFromReadLater(@PathVariable Long id) {
+        boolean removed = articleService.removeArticleReadLater(id);
+        if (removed) {
+            return ResponseEntity.ok().build();
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
     @GetMapping("/read-later")
     public List<ArticleInfo> getReadLaterArticles() {
         return articleService.getArticlesReadLater();

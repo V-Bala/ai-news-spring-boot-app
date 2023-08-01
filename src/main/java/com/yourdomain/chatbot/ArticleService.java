@@ -38,4 +38,8 @@ public class ArticleService {
     public List<ArticleInfo> getArticlesReadLater() {
         return articlesReadLater;
     }
+
+    public boolean removeArticleReadLater(Long id) {
+        return articlesReadLater.removeIf(article -> article.getId().equals(id));
+    }
 }
